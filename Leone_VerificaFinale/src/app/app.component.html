@@ -1,0 +1,20 @@
+<!--  PASSAGGIO 1, POI CREARE FILE.MODEL.TS IN APP-->
+<form action="">
+  <input type="text" #nome>Nome
+  <input type="text" #cognome>Cognome
+  <input type="text" #indirizzo>Indirizzo
+  <input type="text" #telefono>Telefono
+  <input type="text" #email>Email
+  <input type="text" #dataPren>Data Prenotazione
+  <input type="text" #oraPren>Ora Prenotazione
+  <br><!--  PASSAGGIO 4 inserire nuove prenotazioni-->
+  <button (click)="prenota(nome, cognome, indirizzo, telefono, email, dataPren, oraPren)">Prenota</button>
+</form>
+<br><!--  PASSAGGIO 3 vedo dati-->
+<div *ngFor="let dato of data"><!--  data= variabile x chiamata in component ts-->
+  <button (click)="mostra(dato)">{{dato.DataPrenotazione}} {{dato.OraPrenotazione}} {{dato.Nome}} {{dato.Cognome}}</button> <!--  PASSAGGIO 5 aggiungere mostra() e resto sotto-->
+</div>
+<br>
+<div *ngIf ="nascondi">
+  <app-fu [finale]="ciclo">ciao</app-fu>
+</div>
